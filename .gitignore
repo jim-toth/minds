@@ -12,6 +12,7 @@ bin/php*
 #ignore composer
 /vendor
 /components
+
 # ignore IDE/hidden/OS cache files
 .*
 *~
@@ -24,6 +25,9 @@ tmtags
 Thumbs.db
 Desktop.ini
 node_modules
+*.sublime-workspace
+*.sublime-project
+
 # don't ignore travis config
 !/.travis.yml
 !.gitignore

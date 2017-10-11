@@ -1,0 +1,15 @@
+<div class="m-miner-wrappers">
+  <div class="m-miner-dockpane mdl-shadow--4dp" [class.m-miner-dockpane-open]="open">
+    <div class="m-miner-dockpane-tab mdl-color--blue-grey-700  mdl-color-text--blue-grey-100" (click)="toggle()">
+      <div class="m-miner-dockpane-tab-title"><i class="material-icons">av_timer</i><span>Miner</span></div>
+    </div>
+    <div class="m-miner-dockpane-container mdl-shadow--2dp" [hidden]="!open">
+
+      <div class="m-miner-controls">
+        <i class="material-icons" [hidden]="mining" (click)="startMining()">play_arrow</i>
+        <i class="material-icons" [hidden]="!mining" (click)="stopMining()">pause</i>
+        <span>Mining: {{mining}}</span>
+      </div>
+    </div>
+  </div>
+</div>

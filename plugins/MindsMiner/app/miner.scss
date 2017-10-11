@@ -1,0 +1,95 @@
+@import 'defaults.scss';
+
+minds-miner {
+  position:fixed;
+  bottom:0;
+  right:255px;
+  z-index:1;
+
+  .m-miner-dockpane {
+    margin: 0 $minds-margin;
+    width: 229px;
+      
+    .m-miner-dockpane-container {
+      min-height: 29px;
+      display: none;
+    }
+
+    &.m-miner-dockpane-open {
+      .m-miner-dockpane-container {
+        display: block;
+        width: 100%;
+        position: relative;
+        background: rgba(255,255,255,1);
+      }
+      .m-miner-dockpane-tab {
+        border-bottom: 1px solid #EAEAEA;
+      }
+    }
+
+    .m-miner-dockpane-tab {
+      background: #455a64;
+      border-radius: 3px 3px 0 0;
+      height: 28px;
+      width: 100%;
+      display: block;
+      cursor: pointer;
+
+      .m-miner-dockpane-tab-title {
+        padding: 5px 12px;
+        display: inline-block;
+
+        text-overflow: ellipsis;
+        max-width: 140px;
+        overflow: hidden;
+
+        > i {
+          vertical-align: middle;
+          font-size: 17px;
+          padding: 0 8px 0 0;
+        }
+        > span {
+          vertical-align: middle;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 11px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    // &.m-miner-dockpane-container {
+    .m-miner-controls {
+      height: 30px;
+      width: 229px;
+      background: rgba(255,255,255,1);
+      box-sizing: border-box;
+
+      > i {
+        cursor: pointer;
+        vertical-align: middle;
+        font-size: 20px;
+        padding: 0px 4px;
+      }
+
+      > span {
+        border: 0;
+        height: 100%;
+        width: 168px;
+        vertical-align: middle;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 0;
+        -webkit-appearance: none;
+        outline: none;
+      }
+    }
+    //}
+  }
+
+  .m-miner-wrappers {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
